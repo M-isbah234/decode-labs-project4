@@ -15,3 +15,9 @@ GET /api/recommend/{movie_id}?top_n=5 - Retrieve top-N content-based recommendat
 GET /api/search?query={query} - Search movies by title or genre.
 GET /api/genres - List all unique genres.
 GET /api/top-rated - Get movies sorted by rating.
+
+How It WorksTF-IDF Vectorization: 
+Movie descriptions are tokenized, stripped of English stop words, and converted into numerical feature vectors.
+Similarity Calculation: A pre-calculated 15x15 cosine similarity matrix is generated at startup using the formula:
+cosine similarity = (A.B) / (||A|| x ||B||)
+Recommendation Engine: When a user selects a movie, the system queries the matrix, sorts the scores in descending order, and returns the top matches along with their percentage scores.
