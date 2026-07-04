@@ -21,3 +21,12 @@ Movie descriptions are tokenized, stripped of English stop words, and converted 
 Similarity Calculation: A pre-calculated 15x15 cosine similarity matrix is generated at startup using the formula:
 cosine similarity = (A.B) / (||A|| x ||B||)
 Recommendation Engine: When a user selects a movie, the system queries the matrix, sorts the scores in descending order, and returns the top matches along with their percentage scores.
+
+
+UI Features
+All Movies: Overview of the 15-movie database with structural dataset metrics.
+Search & Filter: Real-time search processing across titles and genres.
+
+Top Rated: Quick sorting based on weighted IMDb ratings.
+
+Recommendations: Instant, dynamic updates displaying percentage match metrics.
